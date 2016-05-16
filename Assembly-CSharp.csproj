@@ -1,0 +1,314 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+	<Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+	<Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+	<ProductVersion>10.0.20506</ProductVersion>
+	<SchemaVersion>2.0</SchemaVersion>
+	<RootNamespace></RootNamespace>
+	<ProjectGuid>{7BD9DA20-D9A1-E365-3A3D-2A039FF7313E}</ProjectGuid>
+	<OutputType>Library</OutputType>
+	<AppDesignerFolder>Properties</AppDesignerFolder>
+	<AssemblyName>Assembly-CSharp</AssemblyName>
+	<TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+	<FileAlignment>512</FileAlignment>
+	<BaseDirectory>Assets</BaseDirectory>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+	<DebugSymbols>true</DebugSymbols>
+	<DebugType>full</DebugType>
+	<Optimize>false</Optimize>
+	<OutputPath>Temp\bin\Debug\</OutputPath>
+	<DefineConstants>DEBUG;TRACE;UNITY_5_2_2;UNITY_5_2;UNITY_5;ENABLE_NEW_BUGREPORTER;ENABLE_2D_PHYSICS;ENABLE_4_6_FEATURES;ENABLE_AUDIO;ENABLE_CACHING;ENABLE_CLOTH;ENABLE_DUCK_TYPING;ENABLE_FRAME_DEBUGGER;ENABLE_GENERICS;ENABLE_HOME_SCREEN;ENABLE_IMAGEEFFECTS;ENABLE_LIGHT_PROBES_LEGACY;ENABLE_MICROPHONE;ENABLE_MULTIPLE_DISPLAYS;ENABLE_PHYSICS;ENABLE_PLUGIN_INSPECTOR;ENABLE_SHADOWS;ENABLE_SINGLE_INSTANCE_BUILD_SETTING;ENABLE_SPRITES;ENABLE_TERRAIN;ENABLE_RAKNET;ENABLE_UNET;ENABLE_UNITYEVENTS;ENABLE_VR;ENABLE_WEBCAM;ENABLE_WWW;ENABLE_CLOUD_SERVICES;ENABLE_CLOUD_SERVICES_ADS;ENABLE_CLOUD_HUB;ENABLE_CLOUD_PROJECT_ID;ENABLE_CLOUD_SERVICES_ANALYTICS;ENABLE_CLOUD_SERVICES_UNET;ENABLE_CLOUD_SERVICES_BUILD;ENABLE_CLOUD_LICENSE;ENABLE_EDITOR_METRICS;ENABLE_REFLECTION_BUFFERS;INCLUDE_DYNAMIC_GI;INCLUDE_GI;INCLUDE_IL2CPP;INCLUDE_DIRECTX12;PLATFORM_SUPPORTS_MONO;RENDER_SOFTWARE_CURSOR;ENABLE_LOCALIZATION;ENABLE_ANDROID_ATLAS_ETC1_COMPRESSION;UNITY_STANDALONE_OSX;UNITY_STANDALONE;ENABLE_SUBSTANCE;ENABLE_GAMECENTER;ENABLE_TEXTUREID_MAP;ENABLE_RUNTIME_GI;ENABLE_MOVIES;ENABLE_NETWORK;ENABLE_CRUNCH_TEXTURE_COMPRESSION;ENABLE_LOG_MIXED_STACKTRACE;ENABLE_UNITYWEBREQUEST;ENABLE_WEBSOCKET_HOST;ENABLE_MONO;ENABLE_PROFILER;UNITY_ASSERTIONS;UNITY_EDITOR;UNITY_EDITOR_64;UNITY_EDITOR_OSX</DefineConstants>
+	<ErrorReport>prompt</ErrorReport>
+	<WarningLevel>4</WarningLevel>
+	<NoWarn>0169</NoWarn>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+	<DebugType>pdbonly</DebugType>
+	<Optimize>true</Optimize>
+	<OutputPath>Temp\bin\Release\</OutputPath>
+	<ErrorReport>prompt</ErrorReport>
+	<WarningLevel>4</WarningLevel>
+	<NoWarn>0169</NoWarn>
+  </PropertyGroup>
+  <ItemGroup>
+	<Reference Include="System" />
+    <Reference Include="System.XML" />
+	<Reference Include="System.Core" />
+	<Reference Include="System.Xml.Linq" />
+	<Reference Include="UnityEngine">
+	  <HintPath>/Applications/Unity/Unity.app/Contents/Frameworks/Managed/UnityEngine.dll</HintPath>
+	</Reference>
+	<Reference Include="UnityEditor">
+	  <HintPath>/Applications/Unity/Unity.app/Contents/Frameworks/Managed/UnityEditor.dll</HintPath>
+	</Reference>
+  </ItemGroup>
+  <ItemGroup>
+     <Compile Include="Assets\LeapMotion+OVR\DemoResources\Scripts\BlocksPlaneGenerator.cs" />
+     <Compile Include="Assets\LeapMotion+OVR\DemoResources\Scripts\MovementManager.cs" />
+     <Compile Include="Assets\LeapMotion+OVR\DemoResources\Scripts\RandomBlocksGenerator.cs" />
+     <Compile Include="Assets\LeapMotion+OVR\Scripts\LeapCameraAlignment.cs" />
+     <Compile Include="Assets\LeapMotion+OVR\Scripts\OVRReset.cs" />
+     <Compile Include="Assets\LeapMotion+OVR\SystemWipe\QuickSwitcher.cs" />
+     <Compile Include="Assets\LeapMotion+OVR\SystemWipe\SystemWipeRecognizerListener.cs" />
+     <Compile Include="Assets\LeapMotion+OVR\SystemWipe\SystemWipeRecognizerNative.cs" />
+     <Compile Include="Assets\LeapMotion+OVR\Widgets\Scripts\DataBinderExamples\DialToTextBinder.cs" />
+     <Compile Include="Assets\LeapMotion+OVR\Widgets\Scripts\DataBinderExamples\SliderToTextDataBinder.cs" />
+     <Compile Include="Assets\LeapMotion+OVR\Widgets\Scripts\DataBinderExamples\ToggleToTextDataBinder.cs" />
+     <Compile Include="Assets\LeapMotion+OVR\Widgets\Scripts\WidgetsEnabler.cs" />
+     <Compile Include="Assets\LeapMotion\DemoResources\Scripts\AerodynamicLeaf.cs" />
+     <Compile Include="Assets\LeapMotion\DemoResources\Scripts\ChangeMaterialOnGrab.cs" />
+     <Compile Include="Assets\LeapMotion\DemoResources\Scripts\CubeWave.cs" />
+     <Compile Include="Assets\LeapMotion\DemoResources\Scripts\FloatingStem.cs" />
+     <Compile Include="Assets\LeapMotion\DemoResources\Scripts\FlowerBloom.cs" />
+     <Compile Include="Assets\LeapMotion\DemoResources\Scripts\FlowerGrower.cs" />
+     <Compile Include="Assets\LeapMotion\DemoResources\Scripts\HandCycler.cs" />
+     <Compile Include="Assets\LeapMotion\DemoResources\Scripts\HandDetector.cs" />
+     <Compile Include="Assets\LeapMotion\DemoResources\Scripts\IgnoreInternalCollisions.cs" />
+     <Compile Include="Assets\LeapMotion\DemoResources\Scripts\ParticlesOnCollision.cs" />
+     <Compile Include="Assets\LeapMotion\DemoResources\Scripts\PetalMesh.cs" />
+     <Compile Include="Assets\LeapMotion\DemoResources\Scripts\PressAnyKeyToReset.cs" />
+     <Compile Include="Assets\LeapMotion\DemoResources\Scripts\RecordingControls.cs" />
+     <Compile Include="Assets\LeapMotion\DemoResources\Scripts\ResetCollisionsOnBreak.cs" />
+     <Compile Include="Assets\LeapMotion\DemoResources\Scripts\StemMesh.cs" />
+     <Compile Include="Assets\LeapMotion\DemoResources\Scripts\VoxelSheet.cs" />
+     <Compile Include="Assets\LeapMotion\Scripts\HandController.cs" />
+     <Compile Include="Assets\LeapMotion\Scripts\Hands\DebugFinger.cs" />
+     <Compile Include="Assets\LeapMotion\Scripts\Hands\DebugHand.cs" />
+     <Compile Include="Assets\LeapMotion\Scripts\Hands\FingerModel.cs" />
+     <Compile Include="Assets\LeapMotion\Scripts\Hands\HandFader.cs" />
+     <Compile Include="Assets\LeapMotion\Scripts\Hands\HandModel.cs" />
+     <Compile Include="Assets\LeapMotion\Scripts\Hands\PolyFinger.cs" />
+     <Compile Include="Assets\LeapMotion\Scripts\Hands\PolyHand.cs" />
+     <Compile Include="Assets\LeapMotion\Scripts\Hands\RiggedFinger.cs" />
+     <Compile Include="Assets\LeapMotion\Scripts\Hands\RiggedHand.cs" />
+     <Compile Include="Assets\LeapMotion\Scripts\Hands\RigidFinger.cs" />
+     <Compile Include="Assets\LeapMotion\Scripts\Hands\RigidHand.cs" />
+     <Compile Include="Assets\LeapMotion\Scripts\Hands\SkeletalFinger.cs" />
+     <Compile Include="Assets\LeapMotion\Scripts\Hands\SkeletalHand.cs" />
+     <Compile Include="Assets\LeapMotion\Scripts\LeapDeviceInfo.cs" />
+     <Compile Include="Assets\LeapMotion\Scripts\LeapImageBasedMaterial.cs" />
+     <Compile Include="Assets\LeapMotion\Scripts\LeapImageRetriever.cs" />
+     <Compile Include="Assets\LeapMotion\Scripts\Tools\ToolModel.cs" />
+     <Compile Include="Assets\LeapMotion\Scripts\Utils\ConfidenceTransparency.cs" />
+     <Compile Include="Assets\LeapMotion\Scripts\Utils\DisconnectionNotice.cs" />
+     <Compile Include="Assets\LeapMotion\Scripts\Utils\EnableDepthBuffer.cs" />
+     <Compile Include="Assets\LeapMotion\Scripts\Utils\EnableUpdateOrdering.cs" />
+     <Compile Include="Assets\LeapMotion\Scripts\Utils\FitHeightToScreen.cs" />
+     <Compile Include="Assets\LeapMotion\Scripts\Utils\GrabbableObject.cs" />
+     <Compile Include="Assets\LeapMotion\Scripts\Utils\GrabbingHand.cs" />
+     <Compile Include="Assets\LeapMotion\Scripts\Utils\KeyToggleEnabled.cs" />
+     <Compile Include="Assets\LeapMotion\Scripts\Utils\LeapRecorder.cs" />
+     <Compile Include="Assets\LeapMotion\Scripts\Utils\LeapUnityExtensions.cs" />
+     <Compile Include="Assets\LeapMotion\Scripts\Utils\MagneticPinch.cs" />
+     <Compile Include="Assets\LeapMotion\Scripts\Utils\StretchToScreen.cs" />
+     <Compile Include="Assets\LeapMotion\Scripts\Utils\TriggerDrawing.cs" />
+     <Compile Include="Assets\LeapMotion\Scripts\Utils\Utils.cs" />
+     <Compile Include="Assets\LeapMotion\Widgets\Scripts\Button\ButtonBase.cs" />
+     <Compile Include="Assets\LeapMotion\Widgets\Scripts\Button\ButtonToggleBase.cs" />
+     <Compile Include="Assets\LeapMotion\Widgets\Scripts\DemoScripts\ButtonDemoGraphics.cs" />
+     <Compile Include="Assets\LeapMotion\Widgets\Scripts\DemoScripts\ButtonDemoToggle.cs" />
+     <Compile Include="Assets\LeapMotion\Widgets\Scripts\DemoScripts\SliderDemo.cs" />
+     <Compile Include="Assets\LeapMotion\Widgets\Scripts\DemoScripts\SliderDemoGraphics.cs" />
+     <Compile Include="Assets\LeapMotion\Widgets\Scripts\Dial\DatePickerHideVolume.cs" />
+     <Compile Include="Assets\LeapMotion\Widgets\Scripts\Dial\DialGraphics.cs" />
+     <Compile Include="Assets\LeapMotion\Widgets\Scripts\Dial\DialModeBase.cs" />
+     <Compile Include="Assets\LeapMotion\Widgets\Scripts\Dial\FadeTextByRotation.cs" />
+     <Compile Include="Assets\LeapMotion\Widgets\Scripts\Dial\HilightTextVolume.cs" />
+     <Compile Include="Assets\LeapMotion\Widgets\Scripts\Events\EventArg.cs" />
+     <Compile Include="Assets\LeapMotion\Widgets\Scripts\Interfaces\AnalogInteractionHandler.cs" />
+     <Compile Include="Assets\LeapMotion\Widgets\Scripts\Interfaces\BinaryInteractionHandler.cs" />
+     <Compile Include="Assets\LeapMotion\Widgets\Scripts\Interfaces\DataBinder.cs" />
+     <Compile Include="Assets\LeapMotion\Widgets\Scripts\Interfaces\IDataBoundWidget.cs" />
+     <Compile Include="Assets\LeapMotion\Widgets\Scripts\Physics\LeapPhysicsBase.cs" />
+     <Compile Include="Assets\LeapMotion\Widgets\Scripts\Physics\LeapPhysicsSpring.cs" />
+     <Compile Include="Assets\LeapMotion\Widgets\Scripts\Scroll\ScrollBase.cs" />
+     <Compile Include="Assets\LeapMotion\Widgets\Scripts\Slider\SliderBase.cs" />
+     <Compile Include="Assets\LeapMotion\Widgets\Scripts\SliderActivationManager.cs" />
+     <Compile Include="Assets\LeapMotion\Widgets\Scripts\Utils\ExponentialSmoothing.cs" />
+     <Compile Include="Assets\LeapMotion\Widgets\Scripts\Utils\FrameRateControls.cs" />
+     <Compile Include="Assets\Magicolo\!Examples\PureData\Scripts\PureDataContainerExample.cs" />
+     <Compile Include="Assets\Magicolo\!Examples\PureData\Scripts\PureDataSequenceExample.cs" />
+     <Compile Include="Assets\Magicolo\!Examples\PureData\Scripts\PureDataSoundExample.cs" />
+     <Compile Include="Assets\Magicolo\AudioTools\PureData\LibPD\LibPDNativeMessaging.cs" />
+     <Compile Include="Assets\Magicolo\AudioTools\PureData\LibPD\LibPDNativeMethods.cs" />
+     <Compile Include="Assets\Magicolo\AudioTools\PureData\LibPD\LibPDNativeMidi.cs" />
+     <Compile Include="Assets\Magicolo\AudioTools\PureData\LibPD\LibPdNativeUnity.cs" />
+     <Compile Include="Assets\Magicolo\AudioTools\PureData\PureData.cs" />
+     <Compile Include="Assets\Magicolo\AudioTools\PureData\PureDataBangReceiver.cs" />
+     <Compile Include="Assets\Magicolo\AudioTools\PureData\PureDataBridge.cs" />
+     <Compile Include="Assets\Magicolo\AudioTools\PureData\PureDataBus.cs" />
+     <Compile Include="Assets\Magicolo\AudioTools\PureData\PureDataBusManager.cs" />
+     <Compile Include="Assets\Magicolo\AudioTools\PureData\PureDataClip.cs" />
+     <Compile Include="Assets\Magicolo\AudioTools\PureData\PureDataClipManager.cs" />
+     <Compile Include="Assets\Magicolo\AudioTools\PureData\PureDataCommandParser.cs" />
+     <Compile Include="Assets\Magicolo\AudioTools\PureData\PureDataCommunicator.cs" />
+     <Compile Include="Assets\Magicolo\AudioTools\PureData\PureDataContainer.cs" />
+     <Compile Include="Assets\Magicolo\AudioTools\PureData\PureDataContainerItem.cs" />
+     <Compile Include="Assets\Magicolo\AudioTools\PureData\PureDataContainerItemInternal.cs" />
+     <Compile Include="Assets\Magicolo\AudioTools\PureData\PureDataContainerManager.cs" />
+     <Compile Include="Assets\Magicolo\AudioTools\PureData\PureDataDelegates.cs" />
+     <Compile Include="Assets\Magicolo\AudioTools\PureData\PureDataEditorHelper.cs" />
+     <Compile Include="Assets\Magicolo\AudioTools\PureData\PureDataEnums.cs" />
+     <Compile Include="Assets\Magicolo\AudioTools\PureData\PureDataFilterRead.cs" />
+     <Compile Include="Assets\Magicolo\AudioTools\PureData\PureDataFloatReceiver.cs" />
+     <Compile Include="Assets\Magicolo\AudioTools\PureData\PureDataGeneralSettings.cs" />
+     <Compile Include="Assets\Magicolo\AudioTools\PureData\PureDataHierarchyManager.cs" />
+     <Compile Include="Assets\Magicolo\AudioTools\PureData\PureDataIdManager.cs" />
+     <Compile Include="Assets\Magicolo\AudioTools\PureData\PureDataInfo.cs" />
+     <Compile Include="Assets\Magicolo\AudioTools\PureData\PureDataInfoManager.cs" />
+     <Compile Include="Assets\Magicolo\AudioTools\PureData\PureDataItem.cs" />
+     <Compile Include="Assets\Magicolo\AudioTools\PureData\PureDataItemManager.cs" />
+     <Compile Include="Assets\Magicolo\AudioTools\PureData\PureDataListReceiver.cs" />
+     <Compile Include="Assets\Magicolo\AudioTools\PureData\PureDataListener.cs" />
+     <Compile Include="Assets\Magicolo\AudioTools\PureData\PureDataMessageReceiver.cs" />
+     <Compile Include="Assets\Magicolo\AudioTools\PureData\PureDataOption.cs" />
+     <Compile Include="Assets\Magicolo\AudioTools\PureData\PureDataOptionValue.cs" />
+     <Compile Include="Assets\Magicolo\AudioTools\PureData\PureDataPatchManager.cs" />
+     <Compile Include="Assets\Magicolo\AudioTools\PureData\PureDataPlay.cs" />
+     <Compile Include="Assets\Magicolo\AudioTools\PureData\PureDataPluginManager.cs" />
+     <Compile Include="Assets\Magicolo\AudioTools\PureData\PureDataReceiver.cs" />
+     <Compile Include="Assets\Magicolo\AudioTools\PureData\PureDataReferences.cs" />
+     <Compile Include="Assets\Magicolo\AudioTools\PureData\PureDataScriptableIdManager.cs" />
+     <Compile Include="Assets\Magicolo\AudioTools\PureData\PureDataSequence.cs" />
+     <Compile Include="Assets\Magicolo\AudioTools\PureData\PureDataSequenceItem.cs" />
+     <Compile Include="Assets\Magicolo\AudioTools\PureData\PureDataSequenceManager.cs" />
+     <Compile Include="Assets\Magicolo\AudioTools\PureData\PureDataSequencePattern.cs" />
+     <Compile Include="Assets\Magicolo\AudioTools\PureData\PureDataSequenceSpatializer.cs" />
+     <Compile Include="Assets\Magicolo\AudioTools\PureData\PureDataSequenceStep.cs" />
+     <Compile Include="Assets\Magicolo\AudioTools\PureData\PureDataSequenceTrack.cs" />
+     <Compile Include="Assets\Magicolo\AudioTools\PureData\PureDataSequenceTrackStep.cs" />
+     <Compile Include="Assets\Magicolo\AudioTools\PureData\PureDataSetup.cs" />
+     <Compile Include="Assets\Magicolo\AudioTools\PureData\PureDataSource.cs" />
+     <Compile Include="Assets\Magicolo\AudioTools\PureData\PureDataSourceItem.cs" />
+     <Compile Include="Assets\Magicolo\AudioTools\PureData\PureDataSourceManager.cs" />
+     <Compile Include="Assets\Magicolo\AudioTools\PureData\PureDataSourceOrContainerItem.cs" />
+     <Compile Include="Assets\Magicolo\AudioTools\PureData\PureDataSourceSpatializer.cs" />
+     <Compile Include="Assets\Magicolo\AudioTools\PureData\PureDataSpatializer.cs" />
+     <Compile Include="Assets\Magicolo\AudioTools\PureData\PureDataSpatializerBase.cs" />
+     <Compile Include="Assets\Magicolo\AudioTools\PureData\PureDataSpatializerDoppler.cs" />
+     <Compile Include="Assets\Magicolo\AudioTools\PureData\PureDataSpatializerManager.cs" />
+     <Compile Include="Assets\Magicolo\AudioTools\PureData\PureDataSubContainer.cs" />
+     <Compile Include="Assets\Magicolo\AudioTools\PureData\PureDataSwitchSettings.cs" />
+     <Compile Include="Assets\Magicolo\AudioTools\PureData\PureDataSwitcher.cs" />
+     <Compile Include="Assets\Magicolo\AudioTools\PureData\PureDataSymbolReceiver.cs" />
+     <Compile Include="Assets\Magicolo\EditorTools\CustomAttributes\ButtonAttribute.cs" />
+     <Compile Include="Assets\Magicolo\EditorTools\CustomAttributes\ClampAttribute.cs" />
+     <Compile Include="Assets\Magicolo\EditorTools\CustomAttributes\CustomAttributeBase.cs" />
+     <Compile Include="Assets\Magicolo\EditorTools\CustomAttributes\DisableAttribute.cs" />
+     <Compile Include="Assets\Magicolo\EditorTools\CustomAttributes\MaxAttrinbute.cs" />
+     <Compile Include="Assets\Magicolo\EditorTools\CustomAttributes\MinAttribute.cs" />
+     <Compile Include="Assets\Magicolo\EditorTools\CustomAttributes\MinMaxSliderAttribute.cs" />
+     <Compile Include="Assets\Magicolo\EditorTools\CustomAttributes\PopupAttribute.cs" />
+     <Compile Include="Assets\Magicolo\EditorTools\CustomAttributes\PropertyFieldAttribute.cs" />
+     <Compile Include="Assets\Magicolo\EditorTools\CustomAttributes\SeparatorAttribute.cs" />
+     <Compile Include="Assets\Magicolo\EditorTools\CustomAttributes\ShowPropertiesAttribute.cs" />
+     <Compile Include="Assets\Magicolo\EditorTools\CustomAttributes\SingleLineVectorAttribute.cs" />
+     <Compile Include="Assets\Magicolo\EditorTools\EditorHelper.cs" />
+     <Compile Include="Assets\Magicolo\GeneralTools\CustomEnums.cs" />
+     <Compile Include="Assets\Magicolo\GeneralTools\Extensions\AnimationCurveExtensions.cs" />
+     <Compile Include="Assets\Magicolo\GeneralTools\Extensions\ArrayExtensions.cs" />
+     <Compile Include="Assets\Magicolo\GeneralTools\Extensions\AudioClipExtensions.cs" />
+     <Compile Include="Assets\Magicolo\GeneralTools\Extensions\AudioSourceExtensions.cs" />
+     <Compile Include="Assets\Magicolo\GeneralTools\Extensions\CameraExtensions.cs" />
+     <Compile Include="Assets\Magicolo\GeneralTools\Extensions\ColorExtensions.cs" />
+     <Compile Include="Assets\Magicolo\GeneralTools\Extensions\ComponentExtensions.cs" />
+     <Compile Include="Assets\Magicolo\GeneralTools\Extensions\DelegateExtensions.cs" />
+     <Compile Include="Assets\Magicolo\GeneralTools\Extensions\DictionaryExtensions.cs" />
+     <Compile Include="Assets\Magicolo\GeneralTools\Extensions\DoubleExtensions.cs" />
+     <Compile Include="Assets\Magicolo\GeneralTools\Extensions\EnumExtensions.cs" />
+     <Compile Include="Assets\Magicolo\GeneralTools\Extensions\FloatExtensions.cs" />
+     <Compile Include="Assets\Magicolo\GeneralTools\Extensions\GUITextExtentions.cs" />
+     <Compile Include="Assets\Magicolo\GeneralTools\Extensions\GameObjectExtensions.cs" />
+     <Compile Include="Assets\Magicolo\GeneralTools\Extensions\INamableExtensions.cs" />
+     <Compile Include="Assets\Magicolo\GeneralTools\Extensions\IntExtensions.cs" />
+     <Compile Include="Assets\Magicolo\GeneralTools\Extensions\LayerMaskExtensions.cs" />
+     <Compile Include="Assets\Magicolo\GeneralTools\Extensions\ListExtensions.cs" />
+     <Compile Include="Assets\Magicolo\GeneralTools\Extensions\MaterialExtensions.cs" />
+     <Compile Include="Assets\Magicolo\GeneralTools\Extensions\MonoBehaviourExtensions.cs" />
+     <Compile Include="Assets\Magicolo\GeneralTools\Extensions\ObjectExtensions.cs" />
+     <Compile Include="Assets\Magicolo\GeneralTools\Extensions\QuaternionExtensions.cs" />
+     <Compile Include="Assets\Magicolo\GeneralTools\Extensions\RectExtensions.cs" />
+     <Compile Include="Assets\Magicolo\GeneralTools\Extensions\RendererExtensions.cs" />
+     <Compile Include="Assets\Magicolo\GeneralTools\Extensions\Rigidbody2DExtension.cs" />
+     <Compile Include="Assets\Magicolo\GeneralTools\Extensions\RigidbodyExtensions.cs" />
+     <Compile Include="Assets\Magicolo\GeneralTools\Extensions\ScriptableObjectExtensions.cs" />
+     <Compile Include="Assets\Magicolo\GeneralTools\Extensions\SerializedPropertyExtensions.cs" />
+     <Compile Include="Assets\Magicolo\GeneralTools\Extensions\SpriteRendererExtensions.cs" />
+     <Compile Include="Assets\Magicolo\GeneralTools\Extensions\StringExtensions.cs" />
+     <Compile Include="Assets\Magicolo\GeneralTools\Extensions\TransformExtensions.cs" />
+     <Compile Include="Assets\Magicolo\GeneralTools\Extensions\TypeExtensions.cs" />
+     <Compile Include="Assets\Magicolo\GeneralTools\Extensions\Vector2Extensions.cs" />
+     <Compile Include="Assets\Magicolo\GeneralTools\Extensions\Vector3Extensions.cs" />
+     <Compile Include="Assets\Magicolo\GeneralTools\Extensions\Vector4Extensions.cs" />
+     <Compile Include="Assets\Magicolo\GeneralTools\HelperFunctions.cs" />
+     <Compile Include="Assets\Magicolo\GeneralTools\Interfaces\IIdentifiable.cs" />
+     <Compile Include="Assets\Magicolo\GeneralTools\Interfaces\INamable.cs" />
+     <Compile Include="Assets\Magicolo\GeneralTools\Interfaces\IShowable.cs" />
+     <Compile Include="Assets\Magicolo\GeneralTools\Interfaces\ISyncable.cs" />
+     <Compile Include="Assets\Magicolo\GeneralTools\Logger\Logger.cs" />
+     <Compile Include="Assets\Magicolo\GeneralTools\Logger\ScreenLogger.cs" />
+     <Compile Include="Assets\Magicolo\GeneralTools\Logger\ScreenLoggerLine.cs" />
+     <Compile Include="Assets\OVR\Scripts\OVRCameraRig.cs" />
+     <Compile Include="Assets\OVR\Scripts\OVRCommon.cs" />
+     <Compile Include="Assets\OVR\Scripts\OVRDisplay.cs" />
+     <Compile Include="Assets\OVR\Scripts\OVRManager.cs" />
+     <Compile Include="Assets\OVR\Scripts\OVRPluginEvent.cs" />
+     <Compile Include="Assets\OVR\Scripts\OVRTracker.cs" />
+     <Compile Include="Assets\OVR\Scripts\OvrCapi.cs" />
+     <Compile Include="Assets\OVR\Scripts\Util\OVRCrosshair.cs" />
+     <Compile Include="Assets\OVR\Scripts\Util\OVRGUI.cs" />
+     <Compile Include="Assets\OVR\Scripts\Util\OVRGamepadController.cs" />
+     <Compile Include="Assets\OVR\Scripts\Util\OVRGridCube.cs" />
+     <Compile Include="Assets\OVR\Scripts\Util\OVRMainMenu.cs" />
+     <Compile Include="Assets\OVR\Scripts\Util\OVRPlayerController.cs" />
+     <Compile Include="Assets\OVR\Scripts\Util\OVRScreenFade.cs" />
+     <Compile Include="Assets\OVR\Scripts\Util\OVRUGUI.cs" />
+     <Compile Include="Assets\OVR\Scripts\Util\OVRVisionGuide.cs" />
+     <None Include="Assets\Plugins\donotdelete.txt" />
+     <None Include="Assets\LeapMotion\Materials\Sources\Shaders\Toony-Basic.shader" />
+     <None Include="Assets\LeapMotion\Resources\LeapCG.cginc" />
+     <None Include="Assets\LeapMotion\README_BEFORE_UPDATING.txt" />
+     <None Include="Assets\Plugins\x86_64\donotdelete.txt" />
+     <None Include="Assets\LeapMotion\DemoResources\ScrollerText.txt" />
+     <None Include="Assets\LeapMotion\readme.txt" />
+     <None Include="Assets\LeapMotion\Resources\ImageHandHighlight.shader" />
+     <None Include="Assets\OVR\Shaders\TextShader3D.shader" />
+     <None Include="Assets\LeapMotion\Shaders\RimShading.shader" />
+     <None Include="Assets\LeapMotion\Dependencies.txt" />
+     <None Include="Assets\LeapMotion\Materials\Sources\Shaders\Toony-BasicOutline.shader" />
+     <None Include="Assets\LeapMotion\Resources\ThresholdOverlay.shader" />
+     <None Include="Assets\LeapMotion\Resources\PassthroughForeground.shader" />
+     <None Include="Assets\LeapMotion\Materials\Sources\Shaders\Toony-LightedOutline.shader" />
+     <None Include="Assets\LeapMotion\Materials\Sources\Shaders\Toony-Lighted.shader" />
+     <None Include="Assets\LeapMotion\Resources\PassthroughBackground.shader" />
+     <None Include="Assets\LeapMotion\Widgets\Shaders\SelfIllumAlpha.shader" />
+     <None Include="Assets\LeapMotion\Version.txt" />
+     <None Include="Assets\OVR\Shaders\OVRGUIShader.shader" />
+     <None Include="Assets\Plugins\x86\donotdelete.txt" />
+     <None Include="Assets\Plugins\SystemWipeRecognizerDll.bundle\Contents\MacOS\version.txt" />
+     <None Include="Assets\Magicolo\README.txt" />
+ <Reference Include="UnityEngine.UI">
+ <HintPath>/Applications/Unity/Unity.app/Contents/UnityExtensions/Unity/GUISystem/UnityEngine.UI.dll</HintPath>
+ </Reference>
+ <Reference Include="UnityEngine.Networking">
+ <HintPath>/Applications/Unity/Unity.app/Contents/UnityExtensions/Unity/Networking/UnityEngine.Networking.dll</HintPath>
+ </Reference>
+ <Reference Include="LeapCSharp.NET3.5">
+ <HintPath>/Users/GC/Documents/KTH/Musical Communication and Music Technology/Project/DT2213/Assets/Plugins/LeapCSharp.NET3.5.dll</HintPath>
+ </Reference>
+ <Reference Include="UnityEditor.iOS.Extensions.Xcode">
+ <HintPath>/Applications/Unity/Unity.app/Contents/PlaybackEngines/iOSSupport/UnityEditor.iOS.Extensions.Xcode.dll</HintPath>
+ </Reference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+	   Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+  
+</Project>
