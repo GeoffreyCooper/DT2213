@@ -1,5 +1,5 @@
 #N canvas 157 155 1017 679 10;
-#X obj 110 73 tgl 25 0 empty empty empty 17 7 0 25 -262144 -1 -1 1
+#X obj 110 73 tgl 25 0 empty empty empty 17 7 0 25 -262144 -1 -1 0
 1;
 #X obj 458 283 *;
 #X obj 506 279 samplerate~;
@@ -115,7 +115,7 @@
 #X obj 110 178 line~;
 #X obj 110 159 pack 0 5;
 #X obj 480 393 r loop_on_off;
-#X text 103 45 Record;
+#X text 97 17 Record;
 #N canvas 330 257 450 300 into_blocks 0;
 #X obj 173 101 % 64;
 #X obj 146 81 t f f;
@@ -171,7 +171,7 @@
 -1 -1;
 #X obj 605 176 s empty_table;
 #X text 446 56 Tempo;
-#X obj 480 413 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 1
+#X obj 480 413 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
 1;
 #X text 698 654 Pierre Massat \, Guitar Extended \, 2013;
 #X text 562 473 Here we play the table (loop) continuously.;
@@ -185,7 +185,7 @@
 #X text 288 264 of the table in samples \, as;
 #X text 289 291 block size.;
 #X text 289 279 a multiple of the;
-#X obj 775 102 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 1
+#X obj 775 102 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
 1;
 #X obj 366 592 dac~;
 #X msg 449 393 1;
@@ -322,9 +322,10 @@
 #X obj 381 486 r vol-output;
 #X text 876 474 Reverse it !!!;
 #X obj 751 188 s vol-output;
-#X obj -36 304 r~ HiHat;
-#X obj -101 301 r~ Bass;
-#X obj -179 303 r~ Snare;
+#X obj -179 303 r~ snare;
+#X obj -101 301 r~ bass;
+#X obj -36 304 r~ hihat;
+#X obj 111 42 r recordtoggle;
 #X connect 0 0 12 0;
 #X connect 1 0 15 0;
 #X connect 2 0 1 1;
@@ -389,3 +390,4 @@
 #X connect 83 0 31 0;
 #X connect 84 0 31 0;
 #X connect 85 0 31 0;
+#X connect 86 0 0 0;
