@@ -180,8 +180,18 @@
 #X obj 1094 483 change;
 #X obj 1094 511 moses 0.5;
 #X obj 467 583 s~ bass;
-#X obj 718 702 s~ hihat;
 #X obj 45 801 s~ snare;
+#X obj 577 819 keyup;
+#X floatatom 579 864 5 0 0 0 - - -;
+#X obj 540 819 key;
+#X floatatom 532 864 5 0 0 0 - - -;
+#X obj 644 821 key;
+#X obj 645 851 select 114;
+#X msg 737 872;
+#X obj 646 888 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X obj 652 918 s recordtoggle;
+#X obj 718 702 s~ hihat;
 #X connect 0 0 1 0;
 #X connect 1 0 2 0;
 #X connect 1 0 64 0;
@@ -223,7 +233,7 @@
 #X connect 35 0 38 1;
 #X connect 38 0 36 0;
 #X connect 38 0 36 1;
-#X connect 38 0 168 0;
+#X connect 38 0 178 0;
 #X connect 40 0 35 0;
 #X connect 41 0 40 0;
 #X connect 42 0 44 0;
@@ -231,7 +241,7 @@
 #X connect 44 0 47 0;
 #X connect 46 0 45 0;
 #X connect 46 0 45 1;
-#X connect 46 0 169 0;
+#X connect 46 0 168 0;
 #X connect 47 0 46 0;
 #X connect 48 0 43 0;
 #X connect 50 0 48 0;
@@ -376,3 +386,8 @@
 #X connect 165 0 166 0;
 #X connect 166 0 136 0;
 #X connect 166 1 136 0;
+#X connect 169 0 170 0;
+#X connect 171 0 172 0;
+#X connect 173 0 174 0;
+#X connect 174 0 176 0;
+#X connect 176 0 177 0;
