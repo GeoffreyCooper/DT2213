@@ -17,6 +17,10 @@ public class DetectCollisionByFingerPosition : MonoBehaviour {
 	public Color leftWallColor;
 	public Color rightWallColor;
 	public Color floorColor;
+	public GameObject metronome;
+	public GameObject blueMarkerPrefab;
+	public GameObject yellowMarkerPrefab;
+	public GameObject redMarkerPrefab;
 
 	private HandModel[] hands;
 	private List<float> fingerXPositions = new List<float>();
@@ -72,6 +76,7 @@ public class DetectCollisionByFingerPosition : MonoBehaviour {
 		if(lowestXPos <= -4.0f && handInLeftWall == false) {
 			handInLeftWall = true;
 			StartCoroutine(FadeColor(leftWall,leftWallColor));
+			Instantiate(yellowMarkerPrefab, new Vector3(metronome.transform.position.x, 4.93f, -0.02f), Quaternion.identity);
 		}
 
 		if (lowestXPos > -4.0f) {
@@ -85,6 +90,7 @@ public class DetectCollisionByFingerPosition : MonoBehaviour {
 		if (highestXPos >= 4.0f && handInRightWall == false) {
 			handInRightWall = true;
 			StartCoroutine(FadeColor(rightWall,rightWallColor));
+			Instantiate(redMarkerPrefab, new Vector3(metronome.transform.position.x, 5.18f, -0.02f), Quaternion.identity);
 		}
 
 		if (highestXPos < 4.0f) {
@@ -95,10 +101,11 @@ public class DetectCollisionByFingerPosition : MonoBehaviour {
 		float lowestYPos = Mathf.Min(fingerYPositions[0],fingerYPositions[1],fingerYPositions[2],fingerYPositions[3],fingerYPositions[4]);
 		//Debug.Log("lowestYPos: " + lowestYPos);
 		
-		//if a finger entered the left wall
+		//if a finger entered the floor
 		if(lowestYPos <= -1.2f && handInFloor == false) {
 			handInFloor = true;
 			StartCoroutine(FadeColor(floor,floorColor));
+			Instantiate(blueMarkerPrefab, new Vector3(metronome.transform.position.x, 4.68f, -0.02f), Quaternion.identity);
 		}
 		
 		if (lowestYPos > -1.2f) {

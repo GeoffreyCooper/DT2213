@@ -1,10 +1,10 @@
-#N canvas 157 155 1017 679 10;
+#N canvas 304 464 1017 679 10;
 #X obj 110 73 tgl 25 0 empty empty empty 17 7 0 25 -262144 -1 -1 0
 1;
 #X obj 458 283 *;
 #X obj 506 279 samplerate~;
 #X obj 458 259 t f b;
-#N canvas 163 142 813 514 set 0;
+#N canvas 524 66 813 514 set 0;
 #X obj 314 83 inlet;
 #X obj 314 205 realtime;
 #X obj 314 109 t b b;
@@ -105,10 +105,10 @@
 #X connect 35 0 18 0;
 #X connect 36 0 35 0;
 #X restore 458 131 pd set tempo;
-#X obj 458 193 * 4;
+#X obj 458 163 * 4;
 #X obj 458 99 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
 -1;
-#X obj 458 237 / 1000;
+#X obj 458 188 / 1000;
 #X obj 58 296 r~ main_out;
 #X obj 58 327 +~;
 #X obj 74 196 *~;
@@ -116,7 +116,7 @@
 #X obj 110 159 pack 0 5;
 #X obj 480 393 r loop_on_off;
 #X text 97 17 Record;
-#N canvas 330 257 450 300 into_blocks 0;
+#N canvas 68 23 450 300 into_blocks 0;
 #X obj 173 101 % 64;
 #X obj 146 81 t f f;
 #X obj 146 121 -;
@@ -171,7 +171,7 @@
 -1 -1;
 #X obj 605 176 s empty_table;
 #X text 446 56 Tempo;
-#X obj 480 413 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
+#X obj 480 413 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 1
 1;
 #X text 698 654 Pierre Massat \, Guitar Extended \, 2013;
 #X text 562 473 Here we play the table (loop) continuously.;
@@ -185,7 +185,7 @@
 #X text 288 264 of the table in samples \, as;
 #X text 289 291 block size.;
 #X text 289 279 a multiple of the;
-#X obj 775 102 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
+#X obj 775 102 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 1
 1;
 #X obj 366 592 dac~;
 #X msg 449 393 1;
@@ -326,7 +326,16 @@
 #X obj -101 301 r~ bass;
 #X obj -36 304 r~ hihat;
 #X obj 111 42 r recordtoggle;
+#X floatatom 347 341 10 0 0 0 - - -;
+#X msg 532 224 2;
+#X obj 532 188 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X text 565 223 2 second loop (1 bar at 4/4 \, 120 bpm);
+#X obj 32 117 metro 500;
+#X obj 32 153 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
+-1;
 #X connect 0 0 12 0;
+#X connect 0 0 91 0;
 #X connect 1 0 15 0;
 #X connect 2 0 1 1;
 #X connect 3 0 1 0;
@@ -334,7 +343,6 @@
 #X connect 4 0 5 0;
 #X connect 5 0 7 0;
 #X connect 6 0 4 0;
-#X connect 7 0 3 0;
 #X connect 8 0 9 0;
 #X connect 9 0 31 0;
 #X connect 10 0 34 0;
@@ -342,6 +350,7 @@
 #X connect 12 0 11 0;
 #X connect 13 0 38 0;
 #X connect 15 0 16 0;
+#X connect 15 0 87 0;
 #X connect 17 0 70 0;
 #X connect 18 0 29 0;
 #X connect 18 0 32 0;
@@ -391,3 +400,6 @@
 #X connect 84 0 31 0;
 #X connect 85 0 31 0;
 #X connect 86 0 0 0;
+#X connect 88 0 3 0;
+#X connect 89 0 88 0;
+#X connect 91 0 92 0;
