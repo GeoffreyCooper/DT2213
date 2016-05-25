@@ -226,7 +226,7 @@
 #X obj -1 507 moses -0.18;
 #X obj 30 450 min;
 #X obj 149 343 - 0.02;
-#N canvas 954 35 958 966 multipad 1;
+#N canvas 954 35 958 966 multipad 0;
 #X obj 127 46 r x_palm;
 #X obj 330 49 r y_palm;
 #X obj 471 51 r z_palm;
