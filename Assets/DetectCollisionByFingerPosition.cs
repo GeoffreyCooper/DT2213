@@ -12,19 +12,27 @@ public class DetectCollisionByFingerPosition : MonoBehaviour {
 	public HandController handController;
 	public GameObject leftWall;
 	public GameObject rightWall;
-	public GameObject floor;
+	public GameObject frontLeftPad;
+	public GameObject frontRightPad;
+	public GameObject backLeftPad;
+	public GameObject backRightPad;
 	public Color hitColor;
 	public Color leftWallColor;
 	public Color rightWallColor;
-	public Color floorColor;
+	public Color frontLeftColor;
+	public Color frontRightColor;
+	public Color backLeftColor;
+	public Color backRightColor;
 	public GameObject metronome;
 	public GameObject blueMarkerPrefab;
 	public GameObject yellowMarkerPrefab;
 	public GameObject redMarkerPrefab;
+	public GameObject greenMarkerPrefab;
 
 	private HandModel[] hands;
 	private List<float> fingerXPositions = new List<float>();
 	private List<float> fingerYPositions = new List<float>();
+	private List<float> fingerZPositions = new List<float>();
 	private bool handInLeftWall = false;
 	private bool handInRightWall = false;
 	private bool handInFloor = false;
@@ -52,7 +60,7 @@ public class DetectCollisionByFingerPosition : MonoBehaviour {
 
 		foreach(HandModel hand in hands) {
 
-			//get the x and y position of each finger and add it to the list
+			//get the x, y and z position of each finger and add it to the list
 			for (int i = 0; i < HandModel.NUM_FINGERS;i++) {
 
 				FingerModel finger = hand.fingers[i];
@@ -65,6 +73,10 @@ public class DetectCollisionByFingerPosition : MonoBehaviour {
 				//add this finger y pos to the list in position i
 				float fingerYPos = finger.GetTipPosition().y;
 				fingerYPositions.Insert(i, fingerYPos);
+
+				//add this finger y pos to the list in position i
+				float fingerZPos = finger.GetTipPosition().z;
+				fingerZPositions.Insert(i, fingerZPos);
 			}
 		}
 
@@ -100,12 +112,39 @@ public class DetectCollisionByFingerPosition : MonoBehaviour {
 		//find the lowest value of finger y positions
 		float lowestYPos = Mathf.Min(fingerYPositions[0],fingerYPositions[1],fingerYPositions[2],fingerYPositions[3],fingerYPositions[4]);
 		//Debug.Log("lowestYPos: " + lowestYPos);
+
+		//find average x position of fingers
+		float averageXPos = (fingerXPositions[0] + fingerXPositions[1] + fingerXPositions[2] + fingerXPositions[3] + fingerXPositions[4]) / 5;
+		//Debug.Log("averageXPos: " + averageXPos);
 		
+		//find average z position of fingers
+		float averageZPos = (fingerZPositions[0] + fingerZPositions[1] + fingerZPositions[2] + fingerZPositions[3] + fingerZPositions[4]) / 5;
+		Debug.Log("averageZPos: " + averageZPos);
+
 		//if a finger entered the floor
 		if(lowestYPos <= -1.2f && handInFloor == false) {
 			handInFloor = true;
-			StartCoroutine(FadeColor(floor,floorColor));
-			Instantiate(blueMarkerPrefab, new Vector3(metronome.transform.position.x, 4.68f, -0.02f), Quaternion.identity);
+
+			//front left pad
+			if (averageZPos < -3 && averageXPos < 0) {
+				StartCoroutine(FadeColor(frontLeftPad,frontLeftColor));
+				Instantiate(redMarkerPrefab, new Vector3(metronome.transform.position.x, 4.43f, -0.02f), Quaternion.identity);
+			}
+			//front right pad
+			else if (averageZPos < -3 && averageXPos >= 0) {
+				StartCoroutine(FadeColor(frontRightPad,frontRightColor));
+				Instantiate(blueMarkerPrefab, new Vector3(metronome.transform.position.x, 4.68f, -0.02f), Quaternion.identity);
+			}
+			//back left pad
+			else if (averageZPos >= -3 && averageXPos < 0) {
+				StartCoroutine(FadeColor(backLeftPad,backLeftColor));
+				Instantiate(yellowMarkerPrefab, new Vector3(metronome.transform.position.x, 4.93f, -0.02f), Quaternion.identity);
+			}
+			//back right pad
+			if (averageZPos >= -3 && averageXPos >= 0) {
+				StartCoroutine(FadeColor(backRightPad,backRightColor));
+				Instantiate(greenMarkerPrefab, new Vector3(metronome.transform.position.x, 5.18f, -0.02f), Quaternion.identity);
+			}
 		}
 		
 		if (lowestYPos > -1.2f) {
@@ -115,13 +154,13 @@ public class DetectCollisionByFingerPosition : MonoBehaviour {
 	}
 
 
-	public IEnumerator FadeColor(GameObject wall, Color fadeToColor) {
+	public IEnumerator FadeColor(GameObject pad, Color fadeToColor) {
 		Debug.Log("Starting color lerp");
 		float ElapsedTime = 0.0f;
 		float TotalTime = 0.2f;
 		while (ElapsedTime < TotalTime) {
 			ElapsedTime += Time.deltaTime;
-			wall.GetComponent<Renderer>().material.color = Color.Lerp(hitColor, fadeToColor, (ElapsedTime / TotalTime));
+			pad.GetComponent<Renderer>().material.color = Color.Lerp(hitColor, fadeToColor, (ElapsedTime / TotalTime));
 			yield return null;
 		}
 		Debug.Log("Ending color lerp");
