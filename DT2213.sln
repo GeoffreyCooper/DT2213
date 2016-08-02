@@ -1,6 +1,8 @@
 Microsoft Visual Studio Solution File, Format Version 11.00
 # Visual Studio 2008
 
+Project("{1EC8DFCF-B896-97DE-6C7A-596873212CE9}") = "DT2213", "Assembly-CSharp-firstpass.csproj", "{F5CDC026-A20A-E457-2F54-03CA21A88F9C}"
+EndProject
 Project("{1EC8DFCF-B896-97DE-6C7A-596873212CE9}") = "DT2213", "Assembly-CSharp.csproj", "{7BD9DA20-D9A1-E365-3A3D-2A039FF7313E}"
 EndProject
 Project("{1EC8DFCF-B896-97DE-6C7A-596873212CE9}") = "DT2213", "Assembly-CSharp-Editor.csproj", "{6684B4D9-D165-9CF9-E218-6B657B199955}"
@@ -11,6 +13,10 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{F5CDC026-A20A-E457-2F54-03CA21A88F9C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F5CDC026-A20A-E457-2F54-03CA21A88F9C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F5CDC026-A20A-E457-2F54-03CA21A88F9C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F5CDC026-A20A-E457-2F54-03CA21A88F9C}.Release|Any CPU.Build.0 = Release|Any CPU
 		{7BD9DA20-D9A1-E365-3A3D-2A039FF7313E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{7BD9DA20-D9A1-E365-3A3D-2A039FF7313E}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{7BD9DA20-D9A1-E365-3A3D-2A039FF7313E}.Release|Any CPU.ActiveCfg = Release|Any CPU
@@ -23,7 +29,7 @@ Global
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
-																										GlobalSection(MonoDevelopProperties) = preSolution
+																																GlobalSection(MonoDevelopProperties) = preSolution
 		StartupItem = Assembly-CSharp.csproj
 		Policies = $0
 		$0.TextStylePolicy = $1

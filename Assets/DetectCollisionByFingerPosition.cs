@@ -17,12 +17,19 @@ public class DetectCollisionByFingerPosition : MonoBehaviour {
 	public GameObject backLeftPad;
 	public GameObject backRightPad;
 	public Color hitColor;
+	public Color hitEmission;
 	public Color leftWallColor;
+	public Color leftWallEmission;
 	public Color rightWallColor;
+	public Color rightWallEmission;
 	public Color frontLeftColor;
+	public Color frontLeftEmission;
 	public Color frontRightColor;
+	public Color frontRightEmission;
 	public Color backLeftColor;
+	public Color backLeftEmission;
 	public Color backRightColor;
+	public Color backRightEmission;
 	public GameObject metronome;
 	public GameObject blueMarkerPrefab;
 	public GameObject yellowMarkerPrefab;
@@ -80,6 +87,7 @@ public class DetectCollisionByFingerPosition : MonoBehaviour {
 			}
 		}
 
+		/*
 		//find the lowest value of finger x positions
 		float lowestXPos = Mathf.Min(fingerXPositions[0],fingerXPositions[1],fingerXPositions[2],fingerXPositions[3],fingerXPositions[4]);
 		//Debug.Log("lowestXPos: " + lowestXPos);
@@ -87,7 +95,7 @@ public class DetectCollisionByFingerPosition : MonoBehaviour {
 		//if a finger entered the left wall
 		if(lowestXPos <= -4.0f && handInLeftWall == false) {
 			handInLeftWall = true;
-			StartCoroutine(FadeColor(leftWall,leftWallColor));
+			StartCoroutine(FadeColor(leftWall,leftWallColor, leftWallEmission));
 			Instantiate(yellowMarkerPrefab, new Vector3(metronome.transform.position.x, 4.93f, -0.02f), Quaternion.identity);
 		}
 
@@ -101,13 +109,13 @@ public class DetectCollisionByFingerPosition : MonoBehaviour {
 
 		if (highestXPos >= 4.0f && handInRightWall == false) {
 			handInRightWall = true;
-			StartCoroutine(FadeColor(rightWall,rightWallColor));
+			StartCoroutine(FadeColor(rightWall,rightWallColor, rightWallEmission));
 			Instantiate(redMarkerPrefab, new Vector3(metronome.transform.position.x, 5.18f, -0.02f), Quaternion.identity);
 		}
 
 		if (highestXPos < 4.0f) {
 			handInRightWall = false;
-		}
+		}*/
 
 		//find the lowest value of finger y positions
 		float lowestYPos = Mathf.Min(fingerYPositions[0],fingerYPositions[1],fingerYPositions[2],fingerYPositions[3],fingerYPositions[4]);
@@ -127,22 +135,22 @@ public class DetectCollisionByFingerPosition : MonoBehaviour {
 
 			//front left pad
 			if (averageZPos < -3 && averageXPos < 0) {
-				StartCoroutine(FadeColor(frontLeftPad,frontLeftColor));
+				StartCoroutine(FadeColor(frontLeftPad,frontLeftColor, frontLeftEmission));
 				Instantiate(redMarkerPrefab, new Vector3(metronome.transform.position.x, 4.43f, -0.02f), Quaternion.identity);
 			}
 			//front right pad
 			else if (averageZPos < -3 && averageXPos >= 0) {
-				StartCoroutine(FadeColor(frontRightPad,frontRightColor));
+				StartCoroutine(FadeColor(frontRightPad,frontRightColor, frontRightEmission));
 				Instantiate(blueMarkerPrefab, new Vector3(metronome.transform.position.x, 4.68f, -0.02f), Quaternion.identity);
 			}
 			//back left pad
 			else if (averageZPos >= -3 && averageXPos < 0) {
-				StartCoroutine(FadeColor(backLeftPad,backLeftColor));
+				StartCoroutine(FadeColor(backLeftPad,backLeftColor, backLeftEmission));
 				Instantiate(yellowMarkerPrefab, new Vector3(metronome.transform.position.x, 4.93f, -0.02f), Quaternion.identity);
 			}
 			//back right pad
 			if (averageZPos >= -3 && averageXPos >= 0) {
-				StartCoroutine(FadeColor(backRightPad,backRightColor));
+				StartCoroutine(FadeColor(backRightPad,backRightColor, backRightEmission));
 				Instantiate(greenMarkerPrefab, new Vector3(metronome.transform.position.x, 5.18f, -0.02f), Quaternion.identity);
 			}
 		}
@@ -154,13 +162,14 @@ public class DetectCollisionByFingerPosition : MonoBehaviour {
 	}
 
 
-	public IEnumerator FadeColor(GameObject pad, Color fadeToColor) {
+	public IEnumerator FadeColor(GameObject pad, Color fadeToColor, Color fadeToEmissionColor) {
 		Debug.Log("Starting color lerp");
 		float ElapsedTime = 0.0f;
 		float TotalTime = 0.2f;
 		while (ElapsedTime < TotalTime) {
 			ElapsedTime += Time.deltaTime;
 			pad.GetComponent<Renderer>().material.color = Color.Lerp(hitColor, fadeToColor, (ElapsedTime / TotalTime));
+			pad.GetComponent<Renderer>().material.SetColor("_EmissionColor", Color.Lerp(hitEmission, fadeToEmissionColor, (ElapsedTime / TotalTime)));
 			yield return null;
 		}
 		Debug.Log("Ending color lerp");

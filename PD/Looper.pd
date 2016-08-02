@@ -1,4 +1,4 @@
-#N canvas 43 99 1209 757 10;
+#N canvas 118 79 1209 757 10;
 #X obj 110 73 tgl 25 0 empty empty empty 17 7 0 25 -262144 -1 -1 0
 1;
 #X obj 458 283 *;
@@ -336,50 +336,95 @@
 #X obj -190 249 r~ backleft;
 #X obj -276 249 r~ frontright;
 #X obj -360 250 r~ frontleft;
-#X obj 389 1174 dac~;
-#X obj 810 867 hsl 128 15 0 10 0 0 empty empty empty -2 -8 0 10 -262144
--1 -1 1200 1;
-#X obj 648 974 *~ 2;
-#X obj 648 994 +~ 2;
-#X obj 687 1016 *~ 2;
-#X obj 686 1039 +~ 2;
-#X obj 434 948 delwrite~ phase2 100;
-#X obj 686 1065 vd~ phase2;
-#X obj 687 972 wrap~;
-#X obj 657 917 phasor~;
-#X obj 686 951 +~ 0.5;
-#X obj 648 951 cos~;
-#X obj 687 992 cos~;
-#X obj 813 964 hsl 128 15 0 3 0 0 empty empty empty -2 -8 0 10 -262144
--1 -1 4400 1;
-#X obj 686 1088 *~ 0.8;
-#X obj 648 1149 *~ 0.8;
-#X obj 757 1176 s~ output;
-#X obj 421 1134 r~ output;
-#X obj 842 1083 hsl 128 15 -0.9 0.9 0 0 empty empty empty -2 -8 0 10
--262144 -1 -1 0 1;
-#X text 562 882 <-- Write to delay lines;
-#X text 758 1062 <-- Read from delay line 2;
-#X text 752 1126 <-- Read from delay line 1;
-#X obj 649 1126 vd~ phase1;
-#X obj 435 888 delwrite~ phase1 100;
-#X text 720 917 <-- Low Frequency Oscillator (LFO);
-#X floatatom 807 891 5 0 0 0 - - -;
-#X floatatom 811 990 5 0 0 0 - - -;
-#X floatatom 839 1104 5 0 0 0 - - -;
-#X text 950 863 <-- Speed (try 0.7);
-#X text 955 962 <-- Depth (try 2.4);
-#X text 982 1083 <-- Feedback (try -0.3);
-#X text 635 817 phasor;
-#X obj 876 740 r backwallx;
-#X obj 1113 784 r backwally;
-#X floatatom 875 773 5 0 0 0 - - -;
-#X floatatom 1118 819 5 0 0 0 - - -;
-#X obj 874 801 / 100;
-#X floatatom 880 827 5 0 0 0 - - -;
-#X obj 1118 852 / 100;
-#X floatatom 1117 882 5 0 0 0 - - -;
+#X obj 747 1332 dac~;
+#X obj 1441 969 hsl 128 15 0 10 0 0 empty empty empty -2 -8 0 10 -262144
+-1 -1 0 1;
+#X obj 1279 1076 *~ 2;
+#X obj 1279 1096 +~ 2;
+#X obj 1318 1118 *~ 2;
+#X obj 1317 1141 +~ 2;
+#X obj 1065 1050 delwrite~ phase2 100;
+#X obj 1317 1167 vd~ phase2;
+#X obj 1318 1074 wrap~;
+#X obj 1288 1019 phasor~;
+#X obj 1317 1053 +~ 0.5;
+#X obj 1279 1053 cos~;
+#X obj 1318 1094 cos~;
+#X obj 1444 1066 hsl 128 15 0 3 0 0 empty empty empty -2 -8 0 10 -262144
+-1 -1 0 1;
+#X obj 1317 1190 *~ 0.8;
+#X obj 1279 1251 *~ 0.8;
+#X obj 1388 1278 s~ output;
+#X obj 779 1292 r~ output;
+#X obj 1473 1185 hsl 128 15 -0.9 0.9 0 0 empty empty empty -2 -8 0
+10 -262144 -1 -1 0 1;
+#X text 1193 984 <-- Write to delay lines;
+#X text 1389 1164 <-- Read from delay line 2;
+#X text 1383 1228 <-- Read from delay line 1;
+#X obj 1280 1228 vd~ phase1;
+#X obj 1066 990 delwrite~ phase1 100;
+#X text 1351 1019 <-- Low Frequency Oscillator (LFO);
+#X floatatom 1438 993 5 0 0 0 - - -;
+#X floatatom 1442 1092 5 0 0 0 - - -;
+#X floatatom 1470 1206 5 0 0 0 - - -;
+#X text 1581 965 <-- Speed (try 0.7);
+#X text 1586 1064 <-- Depth (try 2.4);
+#X text 1613 1185 <-- Feedback (try -0.3);
+#X text 1266 919 phasor;
+#X obj 1507 842 r backwallx;
+#X obj 1744 886 r backwally;
+#X floatatom 1506 875 5 0 0 0 - - -;
+#X floatatom 1749 921 5 0 0 0 - - -;
+#X obj 1505 903 / 100;
+#X floatatom 1511 929 5 0 0 0 - - -;
+#X obj 1749 954 / 100;
+#X floatatom 1748 984 5 0 0 0 - - -;
 #X obj -140 162 r~ newdrum;
+#X obj 747 954 lop~;
+#X obj 771 865 hsl 128 15 0 127 0 0 empty empty empty -2 -8 0 10 -262144
+-1 -1 12700 1;
+#X obj 768 894 mtof;
+#X floatatom 768 923 5 0 0 0 - - -;
+#X obj 771 1002 hsl 128 15 0 127 0 0 empty empty empty -2 -8 0 10 -262144
+-1 -1 0 1;
+#X obj 768 1031 mtof;
+#X floatatom 768 1060 5 0 0 0 - - -;
+#X obj 747 1091 hip~;
+#X obj 396 872 hsl 128 15 0 127 0 0 empty empty center_frequency -2
+-8 0 10 -262144 -1 -1 5700 1;
+#X obj 393 901 mtof;
+#X floatatom 393 930 5 0 0 0 - - -;
+#X obj 408 1044 osc~;
+#X obj 393 1126 +~;
+#X text 315 872 default: 220;
+#X text 905 864 default: max;
+#X text 906 1001 default: min;
+#X obj 365 1170 vcf~ 220 1;
+#X obj 573 1044 hsl 128 15 0 5 0 0 empty empty resonance_(0-5) -2 -8
+0 10 -262144 -1 -1 0 1;
+#X obj 411 1000 hsl 128 15 0 5 0 0 empty empty modulation_frequency_(0-5)
+-2 -8 0 10 -262144 -1 -1 0 1;
+#X obj 573 841 hsl 128 15 0 5 0 0 empty empty empty -2 -8 0 10 -262144
+-1 -1 0 1;
+#X obj 576 772 r backwallx;
+#X floatatom 576 805 5 0 0 0 - - -;
+#X obj 97 727 r backwally;
+#X floatatom 97 760 5 0 0 0 - - -;
+#X msg 400 957 220;
+#X obj 76 897 lop~;
+#X obj 100 808 hsl 128 15 0 127 0 0 empty empty empty -2 -8 0 10 -262144
+-1 -1 12700 1;
+#X obj 97 837 mtof;
+#X floatatom 97 866 5 0 0 0 - - -;
+#X obj 100 945 hsl 128 15 0 127 0 0 empty empty empty -2 -8 0 10 -262144
+-1 -1 0 1;
+#X obj 97 974 mtof;
+#X floatatom 97 1003 5 0 0 0 - - -;
+#X obj 76 1034 hip~;
+#X text 234 807 default: max;
+#X text 235 944 default: min;
+#X obj 408 1094 *~;
+#X floatatom 454 1062 5 0 0 0 - - -;
 #X connect 0 0 12 0;
 #X connect 0 0 89 0;
 #X connect 1 0 15 0;
@@ -428,8 +473,7 @@
 #X connect 60 0 62 0;
 #X connect 61 0 60 0;
 #X connect 62 0 59 0;
-#X connect 65 0 95 0;
-#X connect 65 0 95 1;
+#X connect 65 0 161 0;
 #X connect 67 0 77 0;
 #X connect 68 0 71 0;
 #X connect 71 0 76 0;
@@ -488,3 +532,35 @@
 #X connect 133 0 134 0;
 #X connect 134 0 108 0;
 #X connect 135 0 31 0;
+#X connect 136 0 143 0;
+#X connect 137 0 138 0;
+#X connect 138 0 139 0;
+#X connect 139 0 136 1;
+#X connect 140 0 141 0;
+#X connect 141 0 142 0;
+#X connect 142 0 143 1;
+#X connect 143 0 95 0;
+#X connect 143 0 95 1;
+#X connect 144 0 145 0;
+#X connect 145 0 146 0;
+#X connect 147 0 171 0;
+#X connect 148 0 152 1;
+#X connect 152 0 95 0;
+#X connect 152 0 95 1;
+#X connect 153 0 152 2;
+#X connect 154 0 147 0;
+#X connect 155 0 154 0;
+#X connect 155 0 153 0;
+#X connect 156 0 157 0;
+#X connect 158 0 159 0;
+#X connect 160 0 148 0;
+#X connect 161 0 168 0;
+#X connect 162 0 163 0;
+#X connect 163 0 164 0;
+#X connect 164 0 161 1;
+#X connect 165 0 166 0;
+#X connect 166 0 167 0;
+#X connect 167 0 168 1;
+#X connect 168 0 152 0;
+#X connect 171 0 148 1;
+#X connect 172 0 171 1;
